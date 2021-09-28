@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Responsive HTML </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "css/bootstrap.min.css">
+    <link rel = "stylesheet" href = "css/font-awesome.min.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel = "stylesheet" href = "responsive.css">
+</head>
+<body>
+
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container-lg">
+        <a class="navbar-brand fs-4 fw-bold" href="#"> Alvvays, Alvvays! Responsive Webpage </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active fs-5" aria-current="page" href="#"> Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5" href="#"> Maps </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5" href="#"> Contact </a>
+            </li>
+          </ul>
+        </div>
+    </div>
+</nav>
+<!-- Navbar End -->
+
+<!-- Maps and Contact Start -->
+<section class="p-5">
+  <div class="container-lg">
+    <div class="row g-4">
+      <div class="col-md">
+        <h2 class="text-center mb-4"> Contact Info </h2>
+        <ul class="list-group list-group-flush lead">
+          <li class="list-group-item">
+            <span class="fw-bold"> Main Location: </span> 50 Main st Boston MA
+          </li>
+          <li class="list-group-item">
+            <span class="fw-bold"> Enrollment Email: </span> email123@gmail.com
+          </li>
+          <li class="list-group-item">
+            <span class="fw-bold"> Student Email: </span> jtelesforo@gmail.com
+          </li>
+          <li class="list-group-item">
+            <span class="fw-bold"> Student Phone: </span> 555-2471
+          </li>
+        </ul>
+      </div>
+      <div class="col-md">
+        <div id ="map"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Maps and Contact End -->
+
+
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<script src = "js/bootstrap.bundle.min.js"></script> 
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1Ijoic3NldWxpZS0iLCJhIjoiY2t1M2pndnB3MW90NDJ2bzdyNzhsaWQycCJ9.EY8wQuUXuk-MgIyh5biM6w';
+  var map = new mapboxgl.Map({
+  container: 'map',
+  style: 'mapbox://styles/mapbox/streets-v11',
+  center : [-71.060982, 42.35725],
+  zoom: 18
+  });
+  </script> 
+</body>
+</html>
